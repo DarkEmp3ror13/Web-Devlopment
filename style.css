@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Charcoal-Grey);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: var(--White);
+    margin-top: 80px;
+    border-radius: 25px;
+    gap: 30px;
+    width: 800px;
+    font-family: "Roboto",sans-serif;
+}
+
+.wrapper .left {
+    flex: 1;
+    margin-left: 30px;
+}
+
+
+.left h1 {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 60px;
+}
+
+.left .content {
+    margin: 30px 0;
+}
+
+.left .content p {
+    margin-bottom: 30px;
+}
+
+.left ul {
+    margin: 0px 10px;
+    position: relative;
+    font-size: 15px;
+}
+
+.left ul li {
+    list-style: none;
+    margin-top: 15px;
+    position: relative;
+    left: 20px;
+}
+
+.left ul li::before {
+    content: url(./assets/images/icon-list.svg);
+    /* padding: 0 10px; */
+    position: absolute;
+    display: block;
+    transform: translateX(-150%);
+}
+
+.left .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.left .contact h4 {
+    font-size: 15px;
+}
+
+.left .contact input {
+    height: 40px;
+    border: 0.01rem solid grey;
+    border-radius: 6px;
+    margin-top: 5px;   
+}
+
+::placeholder {
+    padding: 10px;
+}
+
+.left .contact .btn-primary {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.wrapper .right {
+    
+    flex: 1;
+    margin: 10px 10px;
+}
+
+ .image {
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    margin: 10px 10px;
+    height: 540px;
+    vertical-align: middle;
+}
+
+
+@media (max-width: 550px) and (min-width: 300px) {
+
+
+    body {
+        background-color: var(--Dark-Slate-Grey);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: var(--White);
+        font-family: "Roboto",sans-serif;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        height: calc(100vh - 16px);
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .image {
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 0px;
+        height: 240px;
+        vertical-align: middle;
+        margin: 0;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+
+    .wrapper .right {
+        order: 1;
+        margin: 0;
+    }
+
+.wrapper .left {
+    margin-left: 20px;
+    order: 2;
+    width: 100vw;
+}
+
+.wrapper .left .logo {
+    margin-top: -150px;
+}
+
+.left h1 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.left .content {
+    margin: 30px 0;
+}
+
+.left .content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.left ul {
+    margin: 0px 10px;
+    position: relative;
+    font-size: 15px;
+}
+
+.left ul li {
+    list-style: none;
+    margin-top: 15px;
+    position: relative;
+    left: 20px;
+}
+
+.left ul li::before {
+    content: url(./assets/images/icon-list.svg);
+    position: absolute;
+    display: block;
+    transform: translateX(-150%);
+}
+
+.left .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.left .contact h4 {
+    font-size: 12px;
+}
+
+.left .contact input {
+    height: 50px;
+    border: 0.01rem solid grey;
+    border-radius: 6px;
+    margin-top: 5px;
+    width: 88%;
+}
+
+::placeholder {
+    padding: 20px;
+}
+
+.left .contact .btn-primary {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    height: 52px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 88%;
+}
+    
+}
+
+
